@@ -4,7 +4,6 @@ const config = require('../../config')
 const fetch = require('node-fetch')
 const sql = require('mssql')
 const {URLSearchParams} = require('url')
-const request = require('request-promise-native')
 const SECOND = 1000
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms))

@@ -6,10 +6,10 @@ module.exports = async ({app}) => {
     app.get('/api/opal/study/report/:accession', async (req, res) => {
         try {
             let study = await api.getStudyWithReportPDF(req.params)
-            if (study) res.send(study).end(200)
-            else res.end(404)
+            if (study) res.status(200).send(study).end()
+            else res.status(404).end()
         } finally {
-            res.end(500)
+            res.status(500).end()
         }
     })
 }

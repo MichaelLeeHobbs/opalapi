@@ -6,7 +6,7 @@ const app = express()
 app.use(morgan('combined'))
 
 async function main() {
-    // load aws routes
+    // load opal routes
     await opal({app})
 
     process.env.SERVER_PORT = process.env.SERVER_PORT || 3000

@@ -185,6 +185,7 @@ class OpalAPI {
         if (!this.isLoggedIn) await this.login()
 
         let study = await this.getStudy({accession, studyID})
+        if (!study || !Array.isArray(study.recordset)) return undefined
         study = study.recordset.pop()
         let file = await this.getReport(study.study_id)
         study.report = file && file.toString('base64')

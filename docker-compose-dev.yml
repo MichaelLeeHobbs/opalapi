@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  opal-api:
+    container_name: opal-api
+    command: nodemon -L src/index.js
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: opal-api
+    ports: ["3000:3000"]
+    env_file: .env
+    volumes:
+      - ./:/usr/src/app

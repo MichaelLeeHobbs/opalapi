@@ -5,7 +5,7 @@
     "express": "^4.17.1",
     "form-data": "^2.3.3",
     "http-proxy-agent": "^2.1.0",
-    "https-proxy-agent": "^2.2.1",
+    "https-proxy-agent": "^2.2.3",
     "morgan": "^1.10.0",
     "mssql": "^6.2.0",
     "node-fetch": "^2.6.0",

@@ -153,8 +153,6 @@ class OpalAPI {
             ['Accept-Language', 'en-us'],
         ]
         let options = this.getOptions({method: 'GET', referer: url, contentType: null, extraHeaders})
-        console.log('getDefaultWorkList options', options)
-        console.log('getDefaultWorkList options', options.headers.agent)
         return fetch(url + params, options)
     }
 
@@ -184,7 +182,10 @@ class OpalAPI {
     async getStudyWithReportPDF({accession, studyID}) {
         if (!this.isLoggedIn) await this.login()
 
-        let study = await this.getStudy({accession, studyID})
+        let study = await this.getStudy({accession, studyID}).catch((e)=>{
+            console.error(e)
+            return undefined
+        })
         if (!study || !Array.isArray(study.recordset)) return undefined
         study = study.recordset.pop()
         let file = await this.getReport(study.study_id)

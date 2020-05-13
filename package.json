@@ -1,6 +1,6 @@
 {
   "name": "opal-api",
-  "version": "1.0.1",
+  "version": "1.0.10",
   "description": "API for OPAL PACS",
   "main": "src/index.js",
   "repository": "git@github.com:MichaelLeeHobbs/opalapi.git",

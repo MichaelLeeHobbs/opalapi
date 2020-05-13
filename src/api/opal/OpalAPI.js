@@ -188,6 +188,7 @@ class OpalAPI {
         })
         if (!study || !Array.isArray(study.recordset)) return undefined
         study = study.recordset.pop()
+        if (!study) return
         let file = await this.getReport(study.study_id)
         study.report = file && file.toString('base64')
         return study

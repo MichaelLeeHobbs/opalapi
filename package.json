@@ -9,7 +9,7 @@
   "private": false,
   "dependencies": {
     "dotenv": "^8.2.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "lodash": "^4.17.15",
     "morgan": "^1.10.0",
     "mssql": "^6.2.0",
